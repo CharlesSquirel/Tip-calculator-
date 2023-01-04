@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+input {
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: hidden;
+  background-color: #f3f9fa;
+  text-align: right;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  padding-right: 18px;
+  &::-webkit-input-placeholder {
+    color: #00474b;
+  }
+  &::-moz-placeholder {
+    color: #00474b;
+  }
+  &:-ms-input-placeholder {
+    color: #00474b;
+  }
+  &::-ms-input-placeholder {
+    color: #00474b;
+  }
+  &::placeholder {
+    color: #00474b;
+  }
+}
+
+$bg-color: #c5e4e7;
+$black: #000;
+$white: #fff;
+$btn-bg: #00474b;
+$text-color: #5e7a7d;
+$cyan: #26c2ae;
+$warning-color: #e17457;
+$h1-color: #3d6666;
+$person-color: #7f9d9f;
+$input-color: #f3f9fa;
+$desktop: 1024px;

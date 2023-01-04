@@ -21,10 +21,16 @@ input {
   line-height: 36px;
   padding-right: 18px;
 }
+input::-webkit-input-placeholder {
+  color: #00474b;
+}
 input::-moz-placeholder {
   color: #00474b;
 }
 input:-ms-input-placeholder {
+  color: #00474b;
+}
+input::-ms-input-placeholder {
   color: #00474b;
 }
 input::placeholder {
@@ -176,10 +182,16 @@ body {
   padding: 0;
   text-align: center;
 }
+.calc-card .btn-custom::-webkit-input-placeholder {
+  color: #547878;
+}
 .calc-card .btn-custom::-moz-placeholder {
   color: #547878;
 }
 .calc-card .btn-custom:-ms-input-placeholder {
+  color: #547878;
+}
+.calc-card .btn-custom::-ms-input-placeholder {
   color: #547878;
 }
 .calc-card .btn-custom::placeholder {

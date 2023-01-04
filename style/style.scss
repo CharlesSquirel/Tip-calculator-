@@ -1,0 +1,249 @@
+@import "_global.scss";
+
+body {
+  font-size: 28px;
+  font-family: "Space Mono", monospace;
+  background-color: $bg-color;
+  width: 100vw;
+  height: 100vh;
+}
+.main-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.heading {
+  color: $h1-color;
+}
+
+.logo {
+  padding: 50px 0 40px 0;
+  @media screen and (min-width: $desktop) {
+    padding: 163px 0 88px 0;
+  }
+}
+
+.calc-card {
+  background-color: $white;
+  box-shadow: 0px 32px 43px rgba(79, 166, 175, 0.200735);
+  border-radius: 25px 25px 0px 0px;
+  min-height: 789px;
+  position: relative;
+  padding: 30px 32px 20px 33px;
+  color: $text-color;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: center;
+  @media screen and (min-width: $desktop) {
+    border-radius: 25px 25px 25px 25px;
+    width: 920px;
+    height: 481px;
+    min-height: 0;
+    position: relative;
+    padding: 32px 32px 32px 48px;
+    flex-direction: row;
+    gap: 48px;
+  }
+
+  &__first-half {
+    border-radius: 25px 25px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    width: 327px;
+    align-items: center;
+    @media screen and (min-width: $desktop) {
+      border-radius: 0;
+      gap: 40px;
+      width: 379px;
+      height: 388px;
+    }
+  }
+
+  &__bill-box {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    position: relative;
+  }
+
+  &__bill-label {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  &__dolar-icon {
+    position: absolute;
+    top: 30px;
+    left: 20px;
+  }
+
+  &__bill-input,
+  &__person-input {
+    width: 311px;
+    height: 48px;
+    @media screen and (min-width: $desktop) {
+      width: 379px;
+      height: 48px;
+    }
+  }
+
+  &__select-box {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 310px;
+    @media screen and (min-width: $desktop) {
+      width: 379px;
+    }
+  }
+
+  &__select-title-text,
+  &__person-label {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  &__tip-btn-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+    @media screen and (min-width: $desktop) {
+      width: 383px;
+    }
+  }
+
+  .btn {
+    width: 147px;
+    height: 48px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    color: $white;
+    border-radius: 5px;
+    @media screen and (min-width: $desktop) {
+      width: 117px;
+    }
+  }
+
+  .btn-dark {
+    background-color: $btn-bg;
+  }
+
+  .btn-custom {
+    background-color: $input-color;
+    padding: 0;
+    text-align: center;
+    &::-webkit-input-placeholder {
+      color: #547878;
+    }
+    &::-moz-placeholder {
+      color: #547878;
+    }
+    &:-ms-input-placeholder {
+      color: #547878;
+    }
+    &::-ms-input-placeholder {
+      color: #547878;
+    }
+    &::placeholder {
+      color: #547878;
+    }
+  }
+
+  &__person-box {
+    position: relative;
+  }
+
+  &__person-warning {
+    @extend .calc-card__person-label;
+    color: $warning-color;
+  }
+
+  &__person-icon {
+    position: absolute;
+    top: 40px;
+    left: 20px;
+  }
+
+  &__second-half {
+    background: $btn-bg;
+    border-radius: 15px;
+    width: 327px;
+    height: 257px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    @media screen and (min-width: $desktop) {
+      width: 413px;
+      height: 417px;
+      display: flex;
+      justify-content: flex-start;
+      padding: 40px;
+      gap: 25px;
+    }
+  }
+
+  &__tip-amount-box,
+  &__total-box {
+    display: flex;
+    width: 281px;
+    justify-content: space-between;
+    align-items: flex-end;
+    @media screen and (min-width: $desktop) {
+      width: 333px;
+      align-items: center;
+    }
+  }
+
+  &__tip-amount-heading,
+  &__total-heading {
+    @extend .calc-card__person-label;
+    color: $white;
+  }
+
+  &__tip-amount-par,
+  &__total-par {
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 19px;
+    color: $person-color;
+  }
+
+  .total-number,
+  .tip-amount-number {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 47px;
+    text-align: right;
+    color: $cyan;
+    @media screen and (min-width: $desktop) {
+      font-size: 48px;
+      line-height: 71px;
+    }
+  }
+
+  &__reset-btn {
+    width: 281px;
+    height: 48px;
+    background-color: $cyan;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    color: $btn-bg;
+    text-align: center;
+    border-radius: 5px;
+    @media screen and (min-width: $desktop) {
+      width: 333px;
+      margin-top: 100px;
+    }
+  }
+}
