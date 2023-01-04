@@ -20,7 +20,7 @@ body {
 
 .logo {
   padding: 50px 0 40px 0;
-  @media screen and (min-width: $desktop) {
+  @media (min-width: $desktop) {
     padding: 163px 0 88px 0;
   }
 }
@@ -37,7 +37,7 @@ body {
   flex-direction: column;
   gap: 32px;
   align-items: center;
-  @media screen and (min-width: $desktop) {
+  @media (min-width: $desktop) {
     border-radius: 25px 25px 25px 25px;
     width: 920px;
     height: 481px;
@@ -55,7 +55,7 @@ body {
     gap: 32px;
     width: 327px;
     align-items: center;
-    @media screen and (min-width: $desktop) {
+    @media (min-width: $desktop) {
       border-radius: 0;
       gap: 40px;
       width: 379px;
@@ -86,7 +86,7 @@ body {
   &__person-input {
     width: 311px;
     height: 48px;
-    @media screen and (min-width: $desktop) {
+    @media (min-width: $desktop) {
       width: 379px;
       height: 48px;
     }
@@ -97,7 +97,7 @@ body {
     flex-direction: column;
     gap: 16px;
     width: 310px;
-    @media screen and (min-width: $desktop) {
+    @media (min-width: $desktop) {
       width: 379px;
     }
   }
@@ -115,7 +115,7 @@ body {
     gap: 16px;
     align-items: center;
     justify-content: center;
-    @media screen and (min-width: $desktop) {
+    @media (min-width: $desktop) {
       width: 383px;
     }
   }
@@ -128,33 +128,53 @@ body {
     line-height: 36px;
     color: $white;
     border-radius: 5px;
-    @media screen and (min-width: $desktop) {
+    font-family: "Space Mono", monospace;
+    @media (min-width: $desktop) {
       width: 117px;
     }
   }
 
   .btn-dark {
     background-color: $btn-bg;
+    @media (min-width: $desktop) {
+      &:hover {
+        background-color: $light-cyan;
+        color: $btn-bg;
+      }
+    }
+  }
+
+  .btn-disabled {
+    background: #0d686d;
+    color: #00474b;
+    opacity: 0.35;
+    pointer-events: none;
   }
 
   .btn-custom {
     background-color: $input-color;
     padding: 0;
     text-align: center;
+    color: #00474b;
+
     &::-webkit-input-placeholder {
-      color: #547878;
+      opacity: 0.35;
     }
+
     &::-moz-placeholder {
-      color: #547878;
+      opacity: 0.35;
     }
+
     &:-ms-input-placeholder {
-      color: #547878;
+      opacity: 0.35;
     }
+
     &::-ms-input-placeholder {
-      color: #547878;
+      opacity: 0.35;
     }
+
     &::placeholder {
-      color: #547878;
+      opacity: 0.35;
     }
   }
 
@@ -182,7 +202,7 @@ body {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    @media screen and (min-width: $desktop) {
+    @media (min-width: $desktop) {
       width: 413px;
       height: 417px;
       display: flex;
@@ -198,7 +218,7 @@ body {
     width: 281px;
     justify-content: space-between;
     align-items: flex-end;
-    @media screen and (min-width: $desktop) {
+    @media (min-width: $desktop) {
       width: 333px;
       align-items: center;
     }
@@ -225,7 +245,7 @@ body {
     line-height: 47px;
     text-align: right;
     color: $cyan;
-    @media screen and (min-width: $desktop) {
+    @media (min-width: $desktop) {
       font-size: 48px;
       line-height: 71px;
     }
@@ -241,9 +261,17 @@ body {
     color: $btn-bg;
     text-align: center;
     border-radius: 5px;
-    @media screen and (min-width: $desktop) {
+    text-transform: uppercase;
+    @media (min-width: $desktop) {
       width: 333px;
       margin-top: 100px;
+      &:hover {
+        background: #9fe8df;
+      }
     }
   }
+}
+
+.hidden {
+  display: none;
 }
