@@ -1,44 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Tip calculator app</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-  Bill
-
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
-
-  Number of People
-
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frontend Mentor | Tip calculator app</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <main class="main-container">
+      <h1 hidden>CALCULATOR</h1>
+      <div class="logo"><img src="images/logo.svg" alt="Spliter's logo" /></div>
+      <section class="calc-card">
+        sda
+        <!-- FIRST HALF -->
+        <div class="calc-card__first-half">
+          <div class="calc-card__bill-box">
+            <label class="calc-card__bill-label" for="bill">Bill</label>
+            <span class="calc-card__dolar-icon"><img src="images/icon-dollar.svg" alt="" /></span>
+            <input class="calc-card__bill-input" id="bill" type="text" placeholder="0" />
+          </div>
+          <div class="calc-card__select-box">
+            <h2 class="calc-card__select-title-text">Select Tip %</h2>
+            <div class="calc-card__tip-btn-container">
+              <button class="btn btn-dark">5%</button>
+              <button class="btn btn-dark">10%</button>
+              <button class="btn btn-dark">15%</button>
+              <button class="btn btn-dark">25%</button>
+              <button class="btn btn-dark">50%</button>
+              <input class="btn btn-custom" type="text" placeholder="Custom" />
+            </div>
+          </div>
+          <div class="calc-card__person-box">
+            <div class="calc-card__person-text-box">
+              <label class="calc-card__person-label" for="person">Number of People</label>
+              <h2 class="calc-card__person-warning" hidden>Can't be zero!</h2>
+            </div>
+            <span class="calc-card__person-icon"><img src="images/icon-person.svg" alt="" /></span>
+            <input class="calc-card__person-input" id="person" type="text" placeholder="0" />
+          </div>
+        </div>
+        <!-- SECOND HALF -->
+        <div class="calc-card__second-half">
+          <div class="calc-card__tip-amount-box">
+            <div class="calc-card__tip-amount-text-box">
+              <h2 class="calc-card__tip-amount-heading">Tip Amount</h2>
+              <p class="calc-card__tip-amount-par">/ person</p>
+            </div>
+            <div class="calc-card__tip-amount-number"><span class="tip-amount-number">$0.00</span></div>
+          </div>
+          <div class="calc-card__total-box">
+            <div class="calc-card__total-text-box">
+              <h2 class="calc-card__total-heading">Total</h2>
+              <p class="calc-card__total-par">/ person</p>
+            </div>
+            <div class="calc-card__total-number"><span class="total-number">$0.00</span></div>
+          </div>
+          <button class="calc-card__reset-btn">Reset</button>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>

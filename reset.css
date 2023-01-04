@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+input {
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: hidden;
+  background-color: #f3f9fa;
+  text-align: right;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  padding-right: 18px;
+}
+input::-moz-placeholder {
+  color: #00474b;
+}
+input:-ms-input-placeholder {
+  color: #00474b;
+}
+input::placeholder {
+  color: #00474b;
+}/*# sourceMappingURL=reset.css.map */
