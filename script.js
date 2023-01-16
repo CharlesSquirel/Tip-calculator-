@@ -11,6 +11,7 @@ const tipButton15 = document.querySelector(".btn-15");
 const tipButton25 = document.querySelector(".btn-25");
 const tipButton50 = document.querySelector(".btn-50");
 const tipButtons = document.querySelectorAll(".btn");
+const customTipButton = document.querySelector(".btn-custom");
 let tip = 0;
 
 // ERROR PEOPLE 0 MESSAGE
@@ -61,6 +62,12 @@ tipButtons.forEach((btn) => {
     }
   });
 });
+
+customTipButton.addEventListener("input", () => {
+    if (+customTipButton.value !== 0) {tip = (+customTipButton.value).toFixed(0)}
+    else {tip = 0}
+    console.log(tip);
+})
 
 // TOTAL AMOUNT
 inputs.forEach((input) => {
