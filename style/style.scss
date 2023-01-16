@@ -102,6 +102,11 @@ body {
     }
   }
 
+  &__person-text-box{
+    display: flex;
+    justify-content: space-between;
+  }
+
   &__select-title-text,
   &__person-label {
     font-weight: 700;
@@ -132,6 +137,10 @@ body {
     @media (min-width: $desktop) {
       width: 117px;
     }
+    &:not(.btn-custom):focus{
+      background-color: $light-cyan;
+        color: $btn-bg;
+    }
   }
 
   .btn-dark {
@@ -145,6 +154,7 @@ body {
   }
 
   .btn-disabled {
+    pointer-events: none;
     background: #0d686d;
     color: #00474b;
     opacity: 0.35;
@@ -189,7 +199,7 @@ body {
 
   &__person-icon {
     position: absolute;
-    top: 40px;
+    top: 26px;
     left: 20px;
   }
 

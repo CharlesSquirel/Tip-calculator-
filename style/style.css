@@ -20,16 +20,10 @@ input {
   font-family: "Space Mono", monospace;
   color: #00474b;
 }
-input::-webkit-input-placeholder {
-  opacity: 0.35;
-}
 input::-moz-placeholder {
   opacity: 0.35;
 }
 input:-ms-input-placeholder {
-  opacity: 0.35;
-}
-input::-ms-input-placeholder {
   opacity: 0.35;
 }
 input::placeholder {
@@ -142,6 +136,10 @@ body {
     width: 379px;
   }
 }
+.calc-card__person-text-box {
+  display: flex;
+  justify-content: space-between;
+}
 .calc-card__select-title-text, .calc-card__person-label, .calc-card__tip-amount-heading, .calc-card__total-heading, .calc-card__person-warning {
   font-weight: 700;
   font-size: 16px;
@@ -174,6 +172,10 @@ body {
     width: 117px;
   }
 }
+.calc-card .btn:not(.btn-custom):focus {
+  background-color: #9fe8df;
+  color: #00474b;
+}
 .calc-card .btn-dark {
   background-color: #00474b;
 }
@@ -184,6 +186,7 @@ body {
   }
 }
 .calc-card .btn-disabled {
+  pointer-events: none;
   background: #0d686d;
   color: #00474b;
   opacity: 0.35;
@@ -195,16 +198,10 @@ body {
   text-align: center;
   color: #00474b;
 }
-.calc-card .btn-custom::-webkit-input-placeholder {
-  opacity: 0.35;
-}
 .calc-card .btn-custom::-moz-placeholder {
   opacity: 0.35;
 }
 .calc-card .btn-custom:-ms-input-placeholder {
-  opacity: 0.35;
-}
-.calc-card .btn-custom::-ms-input-placeholder {
   opacity: 0.35;
 }
 .calc-card .btn-custom::placeholder {
@@ -218,7 +215,7 @@ body {
 }
 .calc-card__person-icon {
   position: absolute;
-  top: 40px;
+  top: 26px;
   left: 20px;
 }
 .calc-card__second-half {
